@@ -1,0 +1,12 @@
+﻿  main.cpp
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(32,110): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(103,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(104,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(105,30): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(106,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(208,36): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(231,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(234,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(239,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Xavier\source\repos\Assignment3Program3\Assignment3Program3\main.cpp(242,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Assignment3Program3.vcxproj -> C:\Users\Xavier\source\repos\Assignment3Program3\Debug\Assignment3Program3.exe
