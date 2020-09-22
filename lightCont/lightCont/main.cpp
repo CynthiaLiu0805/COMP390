@@ -2,17 +2,12 @@
 
    Comp390 - Introduction to Computer Graphics
 
-   Version 4
-
-   Unit 8 Section 3 Objective 1
-
-   Calculating three terms
 
 
 
-   @author: Steve Leung
+   @author: Cynthia Liu
 
-   @date: June 5, 2011
+   @date: June 25, 2020
 
 */
 
@@ -36,7 +31,7 @@ using namespace std;
 
     // viewer
 
-    vector3 viewer(0.0, 0.0, 80.0);
+    vector3 viewer(0.0, 0.0, 200.0);
 
 
 
@@ -65,6 +60,13 @@ using namespace std;
     float ambient_coef = 0.3;
 
     float diffuse_coef = 0.7;
+
+    float specular_coef = 0.3;
+
+    // specular-reflection exponent
+    int specularReflectionExponent = 2;
+
+
 
 
 
@@ -95,8 +97,20 @@ vector3 localColor(vector3 intersect, vector3 baseColor, vector3 normal) {
 
 
     // calculate dot product
-
     float dotProd = unitVec.dot(normal);
+    
+    // reflection vector
+    vector3 reflect = (normal.scalar(dotProd*2)).subtract(unitVec);
+    // normalize reflection vector
+    vector3 reflectVector = reflect.normalize();
+
+    // calculate viewer vector
+    vector3 view = viewer.subtract(intersect);
+    // normalize viewer vector
+    vector3 viewerVec = view.normalize();
+    
+    float dotProd2 = viewerVec.dot(reflectVector);
+
 
 
 
@@ -105,10 +119,15 @@ vector3 localColor(vector3 intersect, vector3 baseColor, vector3 normal) {
     float ambientContr = ambient_coef;
 
     float diffuseContr = diffuse_coef * dotProd;
+    
+    // specular contribution
+    float specularContr = specular_coef * pow(dotProd2, specularReflectionExponent);
+
 //    float ambientContr = 1;
 //    float diffuseContr = 0;
 
-    float intensity = ambientContr + diffuseContr;
+    float intensity = ambientContr + diffuseContr + specularContr;
+//    float intensity = ambientContr + diffuseContr ;
 
 
 

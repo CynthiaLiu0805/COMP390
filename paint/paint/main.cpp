@@ -1,5 +1,5 @@
 #include "glut/glut.h"
-#include <opencv2/opencv.hpp>
+//#include <opencv2/opencv.hpp>
 using namespace cv;
 
 //OpenCV读取图像
@@ -57,5 +57,5 @@ void main(int argc, char** argv)
     //重复循环GLUT事件
     glutMainLoop();
     //OpenGL循环结束后释放图像指针内存
-    free(pixels);
+//    free(pixels);
 }
